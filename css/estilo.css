@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.barra{
+    background-color: #FDF7F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120PX;
+    width: 98%;
+    margin-top: 10px;
+    border-radius: 15px;
+
+}
+
+.lista ul{
+    width: 100%;
+    display: flex;
+}
+
+.lista ul li a{
+    margin: 25px;
+    font-size: 15px;
+    color: #666565;
+    font-family:'Times New Roman', Times, serif;
+    padding: 5px 15px;
+    border-radius: 15px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.lista ul li a:hover{
+    background-color: #01478F;
+    color: #FDF7F2;
+}
+
+.lista{
+    margin-right: 50px;
+}
+
+.barra a img{
+    width: 150px;
+    margin: 25px;
+    margin-left: 50px;
+    margin-bottom: 22px;
+}
+
+main{
+    background-image: url(../img/placa\ madre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: calc(100vh);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    width: 90%;
+    background-color: #FDF7F2;
+    text-align: center;
+    margin-top: 8px;
+    border-radius: 15px;
+    color: #666565;
+    font-size: 23px;
+    padding: 5px;
+}
+
+.main{
+    height: calc(100vh - 125px);
+    width: 60%;
+    background-color: #FDF7F2;
+    margin-top: 8px;
+    border-radius: 15px;
+}
+
+.main h2{
+    width: 100%;
+    text-align: center;
+    color: #666565;
+}
