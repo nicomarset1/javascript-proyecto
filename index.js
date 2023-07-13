@@ -9,6 +9,7 @@ if (nombre == "") {
 }
 
 
+
 let mail = prompt ("Hola " + nombre + ", ahora ingrese su email")
 
 //declaro bucle para la edad
