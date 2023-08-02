@@ -112,97 +112,101 @@ let compras = prompt ("Le gustaría comprar algun accesorio? ponga *si* o *no*")
 
 if (compras === "si") {
 
-let filtro = algo
+let filtro
+
+const extras = [
+    {
+        nombre: "Cintas de goma ",
+        precio: 3450
+    },
+
+    {
+        nombre: "Cintas retornable para pulgar ",
+        precio: 2100
+    },
+
+    {
+        nombre: "Cintas de goma mano completaa",
+        precio: 3800
+    },
+    
+    {
+        nombre: "mousePad gaming 80x30",
+        precio: 7200
+    },
+
+    {
+        nombre: "mousePad redragon 50x20",
+        precio: 6600
+    },
+
+    {
+        nombre: "mousePad Hiperx 78x28",
+        precio: 6900
+    },
+
+    {
+        nombre: "mousePad Nisuta 20x20",
+        precio: 4800
+    },
+
+    {
+        nombre: "Gomitas de goma blancas",
+        precio: 2500
+    },
+
+    {
+        nombre: "Gomitas de goma azules",
+        precio: 2500
+    },
+
+    {
+        nombre: "Gomitas de goma verdes",
+        precio: 2500
+    },
+
+    {
+        nombre: "Gomitas de goma camufladas",
+        precio: 2500
+    },
+
+    {
+        nombre: "Guantes Gaming de neopreme",
+        precio: 4600
+    },
+
+    {
+        nombre: "Guantes Gaming de tela",
+        precio: 4400
+    },
+
+    {
+        nombre: "Estuches de cuero",
+        precio: 3300
+    },
+
+    {
+        nombre: "Estuches de neopreme paraa dos unidades",
+        precio: 5400
+    },
+
+    {
+        nombre: "Estuches básico de tela",
+        precio: 2900
+    }
+]
 
 do{
     filtro = prompt ("Eliga el accesorio a comprar:\n1) cintas\n2) mousepad\n3) gomitas\n4) guantes\n5)estuches")
-}while (filtro != "cintas" || filtro != "mousepad" || filtro != "gomitas" || filtro != "guantes" || filtro != "estuches" (filtro) )
+}while ((filtro = "cintas") || (filtro = "mousepad") || (filtro = "gomitas") || (filtro = "guantes") || (filtro = "estuches") (filtro) ) 
 
-    const extras = [
-        {
-            nombre: "Cinta de goma ",
-            precio: 3450
-        },
-
-        {
-            nombre: "Cinta retornable para pulgar ",
-            precio: 2100
-        },
-
-        {
-            nombre: "Cinta de goma mano completaa",
-            precio: 3800
-        },
-        
-        {
-            nombre: "Pad gaming 80x30",
-            precio: 7200
-        },
-
-        {
-            nombre: "Pad redragon 50x20",
-            precio: 6600
-        },
-
-        {
-            nombre: "Pad Hiperx 78x28",
-            precio: 6900
-        },
-
-        {
-            nombre: "Pad Nisuta 20x20",
-            precio: 4800
-        },
-
-        {
-            nombre: "Gomitas de goma blancas",
-            precio: 2500
-        },
-
-        {
-            nombre: "Gomitas de goma azules",
-            precio: 2500
-        },
-
-        {
-            nombre: "Gomitas de goma verdes",
-            precio: 2500
-        },
-
-        {
-            nombre: "Gomitas de goma camufladas",
-            precio: 2500
-        },
-
-        {
-            nombre: "Guantes Gaming de neopreme",
-            precio: 4600
-        },
-
-        {
-            nombre: "Guantes Gaming de tela",
-            precio: 4400
-        },
-
-        {
-            nombre: "Estuche de cuero",
-            precio: 3300
-        },
-
-        {
-            nombre: "Estuche de neopreme paraa dos unidades",
-            precio: 5400
-        },
-
-        {
-            nombre: "Estuche básico de tela",
-            precio: 2900
-        }
-    ]
 
 const resultadoFinal = extras.filter(
-    (a) => a.nombre.includes = filtro
+    (a) => a.nombre.includes 
 )
+
+console.log(resultadoFinal1)
+
 } else {
     alert("Gracias por su visita")
 }
