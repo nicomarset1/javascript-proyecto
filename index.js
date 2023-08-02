@@ -91,6 +91,135 @@ function mostrar (mensaje){
 multiplicar(precio, unidades);
 mostrar(resultado)
 
+//calculamos el iva
+
+const arrayuno= [resultado]
+
+const arraydos= [0.21]
+
+const arraytres= [1.21]
+
+let iva = prompt ("Bien, ingrese 1 para calcular el iva final")
+
+if (iva == 1){
+    alert("Su iva es de $" + arrayuno * arraydos)
+    alert("Y su precio final con el iva sumado es de $" + arrayuno * arraytres)
+} else {
+    alert("Vale...")
+}
+
+let compras = prompt ("Le gustaría comprar algun accesorio? ponga *si* o *no*")
+
+if (compras === "si") {
+
+let filtro = algo
+
+do{
+    filtro = prompt ("Eliga el accesorio a comprar:\n1) cintas\n2) mousepad\n3) gomitas\n4) guantes\n5)estuches")
+}while (filtro != "cintas" || filtro != "mousepad" || filtro != "gomitas" || filtro != "guantes" || filtro != "estuches" (filtro) )
+
+    const extras = [
+        {
+            nombre: "Cinta de goma ",
+            precio: 3450
+        },
+
+        {
+            nombre: "Cinta retornable para pulgar ",
+            precio: 2100
+        },
+
+        {
+            nombre: "Cinta de goma mano completaa",
+            precio: 3800
+        },
+        
+        {
+            nombre: "Pad gaming 80x30",
+            precio: 7200
+        },
+
+        {
+            nombre: "Pad redragon 50x20",
+            precio: 6600
+        },
+
+        {
+            nombre: "Pad Hiperx 78x28",
+            precio: 6900
+        },
+
+        {
+            nombre: "Pad Nisuta 20x20",
+            precio: 4800
+        },
+
+        {
+            nombre: "Gomitas de goma blancas",
+            precio: 2500
+        },
+
+        {
+            nombre: "Gomitas de goma azules",
+            precio: 2500
+        },
+
+        {
+            nombre: "Gomitas de goma verdes",
+            precio: 2500
+        },
+
+        {
+            nombre: "Gomitas de goma camufladas",
+            precio: 2500
+        },
+
+        {
+            nombre: "Guantes Gaming de neopreme",
+            precio: 4600
+        },
+
+        {
+            nombre: "Guantes Gaming de tela",
+            precio: 4400
+        },
+
+        {
+            nombre: "Estuche de cuero",
+            precio: 3300
+        },
+
+        {
+            nombre: "Estuche de neopreme paraa dos unidades",
+            precio: 5400
+        },
+
+        {
+            nombre: "Estuche básico de tela",
+            precio: 2900
+        }
+    ]
+
+const resultadoFinal = extras.filter(
+    (a) => a.nombre.includes = filtro
+)
+} else {
+    alert("Gracias por su visita")
+}
 
 
 
+
+
+
+
+
+
+
+//consologueamos todos los datos 
+
+console.log("Su nombre es " + nombre)
+console.log("Su mail es " + mail)
+console.log("Su edad es de " + numero)
+console.log("Usted a comprado " + unidades + " unidades del " + produc)
+console.log("Su monto final a pagar con iva incluido es de $" + arrayuno * arraytres)
