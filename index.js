@@ -204,10 +204,10 @@ do{
 
 
 const resultadoFinal = extras.filter(
-    (a) => a.nombre.includes ("Estuches")
+    (a) => a.nombre.includes = (filtro)
 )
 
-console.log(resultadoFinal1)
+resultadoFinal.forEach((filtro=>{alert(filtro.nombre)}))
 
 } else {
     alert("Gracias por su visita")
