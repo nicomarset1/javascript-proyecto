@@ -108,7 +108,9 @@ if (iva == 1){
     alert("Vale...")
 }
 
-let filtro
+let filtro = "algo"
+
+let resultadoFinal = "algo"
 
 const extras = [
     {
@@ -192,17 +194,17 @@ const extras = [
     }
 ]
 
-let compras = prompt ("Le gustaría comprar algun accesorio? ponga *si* o *no*")
+let compras = prompt ("Le gustaría comprar algun accesorio? ponga *si* para proceder")
 
 if (compras === "si") {
 
 do{
     filtro = prompt ("Eliga el accesorio a comprar:\n1) cintas\n2) mousepad\n3) gomitas\n4) guantes\n5)estuches")
-}while (filtro != "cintas" || filtro != "mousepad" || filtro != "gomitas" || filtro != "guantes" || filtro != "estuches" (filtros) )
+}while (filtro != "cintas" && filtro != "mousepad" && filtro != "gomitas" && filtro != "guantes" && filtro != "estuches")
 
 
 const resultadoFinal = extras.filter(
-    (a) => a.nombre.includes 
+    (a) => a.nombre.includes ("Estuches")
 )
 
 console.log(resultadoFinal1)
