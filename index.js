@@ -255,6 +255,7 @@ switch (final) {
 
 acces = alert("Su precio en accesorios es de $" + precioAccesorio * unidadesAccesorios + ". Y su precio final de compra es de $" + (resultado + (precioAccesorio * unidadesAccesorios)))
 
+//calcular iva
 
 let iva = prompt ("Bien, ingrese 1 para calcular el iva de la compra")
 
