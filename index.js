@@ -91,37 +91,26 @@ function mostrar (mensaje){
 multiplicar(precio, unidades);
 mostrar(resultado)
 
-//calculamos el iva
-
-const arrayuno= [resultado]
-
-const arraydos= [0.21]
-
-const arraytres= [1.21]
-
-let iva = prompt ("Bien, ingrese 1 para calcular el iva final")
-
-if (iva == 1){
-    alert("Su iva es de $" + arrayuno * arraydos)
-    alert("Y su precio final con el iva sumado es de $" + arrayuno * arraytres)
-} else {
-    alert("Vale...")
-}
-
 let filtro = "algo"
 
 let resultadoFinal = "algo"
 
 let final = "algo"
 
+let unidadesAccesorios;
+
+let acces;
+
+alert("su resultado con iva incluido hasta el momento es de $" + resultado * 1.21)
+
 const extras = [
     {
-        nombre: "cintas de goma ",
+        nombre: "cintas de goma",
         precio: 3450
     },
 
     {
-        nombre: "cintas retornable para pulgar ",
+        nombre: "cintas retornable para pulgar",
         precio: 2100
     },
 
@@ -131,17 +120,17 @@ const extras = [
     },
 
     {
-        nombre: "mousePad redragon 50x20",
+        nombre: "mousepad redragon 50x20",
         precio: 6600
     },
 
     {
-        nombre: "mousePad Hiperx 78x28",
+        nombre: "mousepad hiperx 78x28",
         precio: 6900
     },
 
     {
-        nombre: "mousePad Nisuta 20x20",
+        nombre: "mousepad nisuta 20x20",
         precio: 4800
     },
 
@@ -161,17 +150,17 @@ const extras = [
     },
 
     {
-        nombre: "guantes Gaming de neopreme",
+        nombre: "guantes gaming de neopreme",
         precio: 4600
     },
 
     {
-        nombre: "guantes Gaming de tela",
+        nombre: "guantes gaming de tela",
         precio: 4400
     },
 
     {
-        nombre: "guantes Gaming sin dedos",
+        nombre: "guantes gaming sin dedos",
         precio: 3600
     },
 
@@ -181,7 +170,7 @@ const extras = [
     },
 
     {
-        nombre: "estuches de neopreme paraa dos unidades",
+        nombre: "estuches de neopreme para dos unidades",
         precio: 5400
     },
 
@@ -207,8 +196,83 @@ const resultadoFinal = extras.filter(
 //resultadoFinal.forEach((filtro=>{prompt(filtro.nombre)}))
 
 do{
-    final = prompt("\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
+    final = prompt("Eliga el producto:\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
 }while (final != resultadoFinal[0].nombre && final != resultadoFinal[1].nombre && final != resultadoFinal[2].nombre)
+
+
+do{
+    unidadesAccesorios = parseInt( prompt("cuantas unidades del accesorio va a comprar?"))
+}while(unidadesAccesorios < 1 || isNaN(unidadesAccesorios))
+
+
+switch (final) {
+    case "cintas de goma":
+        precioAccesorio = 3450;
+        break;
+    case "cintas retornable para pulgar":
+        precioAccesorio = 2100;
+        break;
+    case "cintas de goma mano completa":
+        precioAccesorio = 3800;
+        break;
+    case "mousepad redragon 50x20":
+        precioAccesorio = 6600;
+        break;
+    case "mousepad hiperx 78x28":
+        precioAccesorio = 6900;
+        break;
+    case "mousepad nisuta 20x20":
+        precioAccesorio = 4800;
+        break;
+    case "gomitas blancas":
+        precioAccesorio = 2500;
+        break;
+    case "gomitas azules":
+        precioAccesorio = 2500;
+        break;
+    case "gomitas camufladas":
+        precioAccesorio = 2500;
+        break;
+    case "guantes gaming de neopreme":
+        precioAccesorio = 4600;
+        break;
+    case "guantes gaming de tela":
+        precioAccesorio = 4400;
+        break;
+    case "guantes gaming sin dedos":
+        precioAccesorio = 3600;
+        break;
+    case "estuches de cuero":
+        precioAccesorio = 3300;
+        break;
+    case "estuches de neopreme para dos unidades":
+        precioAccesorio = 5400;
+        break;
+    case "estuches básico de tela":
+        precioAccesorio = 2900;
+        break;
+}
+
+acces = alert("Su precio en accesorios es de $" + precioAccesorio * unidadesAccesorios + ". Y su precio final de compra es de $" + (resultado + (precioAccesorio * unidadesAccesorios)))
+
+
+let iva = prompt ("Bien, ingrese 1 para calcular el iva de la compra")
+
+const arrayuno= [resultado + (precioAccesorio * unidadesAccesorios)]
+
+const arraydos= [0.21]
+
+const arraytres= [1.21]
+
+
+if (iva == 1){
+    alert("Su iva es de $" + arrayuno * arraydos)
+    alert("Y su precio final con el iva sumado es de $" + arrayuno * arraytres)
+} else {
+    alert("Vale...")
+}
+
+
 
 } else {
     alert("Gracias por su visita")
