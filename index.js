@@ -292,5 +292,5 @@ if (iva == 1){
 console.log("Su nombre es " + nombre)
 console.log("Su mail es " + mail)
 console.log("Su edad es de " + numero)
-console.log("Usted a comprado " + unidades + " unidades del " + produc)
-console.log("Su monto final a pagar con iva incluido es de $" + arrayuno * arraytres)
+console.log("Usted a comprado " + unidades + " unidades del " + produc + " y " + unidadesAccesorios + " de " + final)
+
