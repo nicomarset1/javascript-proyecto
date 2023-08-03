@@ -112,25 +112,22 @@ let filtro = "algo"
 
 let resultadoFinal = "algo"
 
+let final = "algo"
+
 const extras = [
     {
-        nombre: "Cintas de goma ",
+        nombre: "cintas de goma ",
         precio: 3450
     },
 
     {
-        nombre: "Cintas retornable para pulgar ",
+        nombre: "cintas retornable para pulgar ",
         precio: 2100
     },
 
     {
-        nombre: "Cintas de goma mano completaa",
+        nombre: "cintas de goma mano completa",
         precio: 3800
-    },
-    
-    {
-        nombre: "mousePad gaming 80x30",
-        precio: 7200
     },
 
     {
@@ -149,47 +146,47 @@ const extras = [
     },
 
     {
-        nombre: "Gomitas de goma blancas",
+        nombre: "gomitas blancas",
         precio: 2500
     },
 
     {
-        nombre: "Gomitas de goma azules",
+        nombre: "gomitas azules",
         precio: 2500
     },
 
     {
-        nombre: "Gomitas de goma verdes",
+        nombre: "gomitas camufladas",
         precio: 2500
     },
 
     {
-        nombre: "Gomitas de goma camufladas",
-        precio: 2500
-    },
-
-    {
-        nombre: "Guantes Gaming de neopreme",
+        nombre: "guantes Gaming de neopreme",
         precio: 4600
     },
 
     {
-        nombre: "Guantes Gaming de tela",
+        nombre: "guantes Gaming de tela",
         precio: 4400
     },
 
     {
-        nombre: "Estuches de cuero",
+        nombre: "guantes Gaming sin dedos",
+        precio: 3600
+    },
+
+    {
+        nombre: "estuches de cuero",
         precio: 3300
     },
 
     {
-        nombre: "Estuches de neopreme paraa dos unidades",
+        nombre: "estuches de neopreme paraa dos unidades",
         precio: 5400
     },
 
     {
-        nombre: "Estuches básico de tela",
+        nombre: "estuches básico de tela",
         precio: 2900
     }
 ]
@@ -204,10 +201,12 @@ do{
 
 
 const resultadoFinal = extras.filter(
-    (a) => a.nombre.includes = (filtro)
+    (a) => a.nombre.includes(filtro)
 )
 
-resultadoFinal.forEach((filtro=>{alert(filtro.nombre)}))
+//resultadoFinal.forEach((filtro=>{prompt(filtro.nombre)}))
+
+let final = prompt("\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
 
 } else {
     alert("Gracias por su visita")
