@@ -206,7 +206,9 @@ const resultadoFinal = extras.filter(
 
 //resultadoFinal.forEach((filtro=>{prompt(filtro.nombre)}))
 
-let final = prompt("\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
+do{
+    final = prompt("\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
+}while (final != resultadoFinal[0].nombre && final != resultadoFinal[1].nombre && final != resultadoFinal[2].nombre)
 
 } else {
     alert("Gracias por su visita")
