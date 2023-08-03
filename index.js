@@ -185,7 +185,7 @@ let compras = prompt ("Le gustaría comprar algun accesorio? ponga *si* para pro
 if (compras === "si") {
 
 do{
-    filtro = prompt ("Eliga el accesorio a comprar:\n1) cintas\n2) mousepad\n3) gomitas\n4) guantes\n5)estuches")
+    filtro = prompt ("Ingrese el nombre del accesorio a comprar:\n1) cintas\n2) mousepad\n3) gomitas\n4) guantes\n5)estuches")
 }while (filtro != "cintas" && filtro != "mousepad" && filtro != "gomitas" && filtro != "guantes" && filtro != "estuches")
 
 
@@ -196,7 +196,7 @@ const resultadoFinal = extras.filter(
 //resultadoFinal.forEach((filtro=>{prompt(filtro.nombre)}))
 
 do{
-    final = prompt("Eliga el producto:\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
+    final = prompt("Ingrese el nombre del producto a comprar:\n1)" + resultadoFinal[0].nombre + "\n2)" + resultadoFinal[1].nombre + "\n3)" + resultadoFinal[2].nombre )
 }while (final != resultadoFinal[0].nombre && final != resultadoFinal[1].nombre && final != resultadoFinal[2].nombre)
 
 
