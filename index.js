@@ -1,3 +1,4 @@
+const doc = document
 //declaro arrays
 
 let nombre = prompt ("Ingrese su nombre de usuario")
@@ -7,7 +8,6 @@ if (nombre == "") {
 } else {
     alert ("Su nuevo nombre de usuario es: " + nombre)
 }
-
 
 
 let mail = prompt ("Hola " + nombre + ", ahora ingrese su email")
@@ -24,6 +24,8 @@ while (numero < 18 || numero >100 || isNaN (numero))
 let precio= 0;
 let produc = "mouse";
 let productos = "algo";
+let listaCompras = [];
+
 do{
     productos = parseInt(prompt ("Elige unos de los siguientes mouses colocando su número:\n1) logitech G305: $21500\n2) logitech G203: $17600\n3) razer Essential: $19000\n4) redragon Cobra M711: $14200\n5) redragon Griffin M607: $11900\n6) glorious Model D: $18000\n7) redragon Storm M988: $20700\n8) coolermaster Mm720: $27400"));
 } while (productos < 1 || productos > 8 || isNaN(productos))
@@ -68,6 +70,7 @@ switch (productos) {
         precio = 27400;
         produc = "coolermaster Mm720";
         break;
+
 }
 
 //declaro variable para la cantidad
@@ -78,6 +81,7 @@ do{
     unidades = parseInt( prompt("Cuántas unidades del " + produc + " va a comprar?"))
 }while(unidades < 1 || isNaN(unidades))
 
+listaCompras.push({ producto: produc, cantidad: unidades });
 let resultado = 0
 
 function multiplicar ( precio, cantidad) {
@@ -97,7 +101,7 @@ let resultadoFinal = "algo"
 
 let final = "algo"
 
-let unidadesAccesorios;
+let unidadesAccesorios = 0
 
 let acces;
 
@@ -255,6 +259,7 @@ switch (final) {
 
 acces = alert("Su precio en accesorios es de $" + precioAccesorio * unidadesAccesorios + ". Y su precio final de compra es de $" + (resultado + (precioAccesorio * unidadesAccesorios)))
 
+listaCompras.push({ producto: final, cantidad: unidadesAccesorios });
 //calcular iva
 
 let iva = prompt ("Bien, ingrese 1 para calcular el iva de la compra")
@@ -280,14 +285,19 @@ if (iva == 1){
     alert("Su monto final con iva incluido es de $" + resultado * 1.21)
 }
 
+let mensajeCompras = "Su compra contiene:\n";
+for (let i = 0; i < listaCompras.length; i++) {
+    mensajeCompras += `${i + 1}) ${listaCompras[i].cantidad} unidades del ${listaCompras[i].producto}\n`;
+}
 
-const lista = doc.getElementById("lista")
+lista.innerHTML = `<h3>${mensajeCompras}</h3>`;
 
-lista.innerHTML = "<h3>su compra contiene ${unidades} unidades del ${produc}</h3>"
+//let mensajeDeCompras = "Su compra contiene:\n";
+//for (let a = 0; a < listaDeCompras.length; a++) {
+//    mensajeDeCompras += `${a + 1}) ${listaDeCompras[a].cantidades} unidades de:  ${listaDeCompras[a].productos}\n`;
+//}
 
-
-
-
+//listados.innerHTML = `<h4>${mensajeDeCompras}</h4>`;
 
 
 
@@ -297,4 +307,3 @@ console.log("Su nombre es " + nombre)
 console.log("Su mail es " + mail)
 console.log("Su edad es de " + numero)
 console.log("Usted a comprado " + unidades + " unidades del " + produc + " y " + unidadesAccesorios + " de " + final)
-
