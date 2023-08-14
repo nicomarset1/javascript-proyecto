@@ -17,7 +17,7 @@ let mail = prompt ("Hola " + nombre + ", ahora ingrese su email")
 do{numero = parseInt(prompt("Muy bien, a continuación ingrese su edad"))}
 while (numero < 18 || numero >100 || isNaN (numero))
 
-alert ("oprima aceptar para dirigirse a la compra")
+//alert ("oprima aceptar para dirigirse a la compra")
 
 //declaro variable para los productos
 
@@ -75,7 +75,7 @@ switch (productos) {
 let unidades;
 
 do{
-    unidades = parseInt( prompt("cuantas unidades del " + produc + " va a comprar?"))
+    unidades = parseInt( prompt("Cuántas unidades del " + produc + " va a comprar?"))
 }while(unidades < 1 || isNaN(unidades))
 
 let resultado = 0
@@ -101,7 +101,7 @@ let unidadesAccesorios;
 
 let acces;
 
-alert("su resultado con iva incluido hasta el momento es de $" + resultado * 1.21)
+//alert("su resultado con iva incluido hasta el momento es de $" + resultado * 1.21)
 
 const extras = [
     {
@@ -277,10 +277,13 @@ if (iva == 1){
 
 } else {
     alert("Gracias por su visita")
+    alert("Su monto final con iva incluido es de $" + resultado * 1.21)
 }
 
 
+const lista = doc.getElementById("lista")
 
+lista.innerHTML = "<h3>su compra contiene ${unidades} unidades del ${produc}</h3>"
 
 
 
